@@ -1,0 +1,41 @@
+body {
+  background-color: #EDEDED;
+}
+.main-game-container {
+  display: flex;
+  justify-content: center;
+}
+.inventory {
+  width: 450px;
+  height: 450px;
+  padding: 20px;
+  border: 1px solid #070404;
+  background-color: yellowgreen;
+}
+.choices-container {
+  display: flex;
+  flex-direction: column;
+}
+.main-text {
+  font-size: 35px;
+  width: 1000px;
+  height: 600px;
+  padding: 20px;
+  border: 1px solid #070404;
+  background-color: #f5f5f5;
+  overflow: auto;
+}
+.choices {
+  font-size: 35px;
+  width: 1040px;
+  height: 250px;
+  border: 1px solid #070404;
+  background-color: rgb(124, 125, 121);
+}
+.character {
+  width: 450px;
+  height: 450px;
+  padding: 20px;
+  border: 1px solid #070404;
+  background-color: rgb(189, 44, 92);
+}
