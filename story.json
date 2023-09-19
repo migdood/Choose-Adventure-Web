@@ -1,0 +1,53 @@
+{
+  "chapters": {
+    "chapter1": {
+      "title": "The Mysterious Swamp",
+      "description": "You find yourself at the edge of a dark and mysterious swamp. The air is thick with fog, and the silence is eerie.",
+      "choices": [
+        {
+          "text": "Enter the swamp",
+          "destination": "chapter2a"
+        },
+        {
+          "text": "Turn back",
+          "destination": "chapter2b"
+        }
+      ]
+    }
+    
+    ,
+    
+    "chapter2a": {
+      "title": "Into the Darkness",
+      "description": "As you step into the swamp, the murky water engulfs your boots. The croaking of unseen creatures fills the air.",
+      "choices": [
+        {
+          "text": "Continue deeper",
+          "destination": "chapter3a"
+        },
+        {
+          "text": "Retreat to safety",
+          "destination": "chapter3b"
+        }
+      ]
+    }
+
+    ,
+
+    "chapter2b": {
+      "title": "The Retreat",
+      "description": "You decide not to risk the unknown and turn back, leaving the swamp behind.",
+      "ending": true
+    },
+    "chapter3a": {
+      "title": "In the Heart of Darkness",
+      "description": "The swamp's darkness envelops you. Strange sounds echo around you, and your flashlight flickers.",
+      "ending": true
+    },
+    "chapter3b": {
+      "title": "A Wise Decision",
+      "description": "You wisely choose to retreat, heading back to safety and leaving the swamp behind.",
+      "ending": true
+    }
+  }
+}
