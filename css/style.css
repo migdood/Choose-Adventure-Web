@@ -77,4 +77,17 @@ main .title {
   padding: 20px;
   border: 1px solid #070404;
   background-color: rgb(189, 44, 92);
+  overflow: hidden;
+}
+.character-container{
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+#portrait{
+  border: 1px black solid;
+  width: auto;
+  height: 360px;
 }
