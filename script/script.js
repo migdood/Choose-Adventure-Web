@@ -12,30 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const nameInput = document.getElementById("name");
   const submitButton = document.getElementById("submit");
 
-  let playerName;
-
   fetch("story.json")
     .then((response) => response.json())
     .then((storyData) => {
-      // Function to show the overlay
-      function showOverlay() {
-        overlay.style.display = "flex";
-      }
-
-      // Function to hide the overlay
-      function hideOverlay() {
-        overlay.style.display = "none";
-      }
-
-      // Event listener to hide the overlay when the user submits their name
-      submitButton.addEventListener("click", function () {
-        playerName = nameInput.value;
-        storyData.characters.player.name = playerName;
-        hideOverlay();
-      });
-
-      showOverlay();
-
       let currentChapter = "chapter1";
 
       function displayChapter(chapterId) {
@@ -70,7 +49,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-      displayChapter(currentChapter);
+      function showOverlay() {
+        overlay.style.display = "flex";
+      }
+
+      function hideOverlay() {
+        overlay.style.display = "none";
+      }
+
+      // Stupid button hides the damned overlay and activates the whole shabang
+      submitButton.addEventListener("click", function () {      
+        // My ass replacing the stinking names manually, kill me
+        storyData.chapters.chapter1.title = storyData.chapters.chapter1.title.replace("{{playerName}}", nameInput.value);
+        storyData.chapters.chapter1a.description = storyData.chapters.chapter1a.description.replace("{{playerName}}", nameInput.value);
+
+        //MFing activates the whole shabang
+        displayChapter(currentChapter);
+
+        hideOverlay();
+      });
+
+      showOverlay();
     })
     .catch((error) => console.error("Error loading story data:", error));
 });

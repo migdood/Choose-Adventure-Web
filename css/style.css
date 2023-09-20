@@ -25,6 +25,7 @@ main .title {
 }
 .main-text {
   font-size: 35px;
+  font-weight: 500;
   line-height: 40px;
   width: 1000px;
   height: 600px;

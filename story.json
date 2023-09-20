@@ -1,15 +1,8 @@
 {
-  "characters": {
-    "player": {
-      "name": "",
-      "gender": ""
-    }
-  }
-  ,  
   "chapters": {
     "chapter1": {
-      "title": "Hello Traveler",
-      "description": "Enter your name then select you character. (It has no influence on the game)",
+      "title": "Hello {{playerName}}",
+      "description": "Select a class. (It has no influence on the game, currently)",
       "choices": [
         {
           "text": "Hunter",
@@ -24,7 +17,7 @@
 
     "chapter1a": {
       "title": "Into the Darkness",
-      "description": "You have accepted a quest to retrieve an important journal for a rich merchant. He claims his grandmother keeps it inside a chest in her cabin upon the swamp. He promised you a handsome reward and asked you to never speak of it to anyone else. You accepted and now stand before a deep darkness within the woods ahead. The eerie silence and occasional croaking are your only companion in this darkness.",
+      "description": "{{playerName}}, you have accepted a quest to retrieve an important journal for a rich merchant. </br></br>He claims his grandmother keeps it inside a chest in her cabin upon the swamp. He promised you a handsome reward and asked you to never speak of it to anyone else. You accepted and now stand before a deep darkness within the woods ahead. The eerie silence and occasional croaking are your only companion in this darkness.",
       "choices": [
         {
           "text": "Continue deeper",
