@@ -1,59 +1,76 @@
-//const MainTitle = document.getElementById("main-text-title");
-//const Choice1 = document.getElementById("Choice1");
-//const Choice2 = document.getElementById("Choice2");
-const Choice3 = document.getElementById("choice3");
-const Choice4 = document.getElementById("choice4");
-
-Choice3.style.display = "none";
-Choice4.style.display = "none";
-
-
-
-
-// This event listener waits for the HTML document to be fully loaded before executing its code.
+// "DOMContentLoaded" means it's waiting for all the html to load then executes the JS
 document.addEventListener("DOMContentLoaded", function () {
-  // Get references to HTML elements by their IDs.
   const MainTitle = document.getElementById("main-text-title");
   const chapterDescription = document.getElementById("main-text");
-  const Choice1 = document.getElementById("choice1");
-  const Choice2 = document.getElementById("choice2");
+  const choiceElements = [
+    document.getElementById("choice1"),
+    document.getElementById("choice2"),
+    document.getElementById("choice3"),
+    document.getElementById("choice4"),
+  ];
+  const overlay = document.getElementById("overlay");
+  const nameInput = document.getElementById("name");
+  const submitButton = document.getElementById("submit");
 
-  // Load the story content from the JSON file using the fetch API.
+  let playerName;
+
   fetch("story.json")
-    .then((response) => response.json()) // Parse the JSON response into a JavaScript object.
+    .then((response) => response.json())
     .then((storyData) => {
-      let currentChapter = "chapter1"; // Initialize with the first chapter
+      // Function to show the overlay
+      function showOverlay() {
+        overlay.style.display = "flex";
+      }
 
-      // Function to display a chapter's content based on its ID.
+      // Function to hide the overlay
+      function hideOverlay() {
+        overlay.style.display = "none";
+      }
+
+      // Event listener to hide the overlay when the user submits their name
+      submitButton.addEventListener("click", function () {
+        playerName = nameInput.value;
+        storyData.characters.player.name = playerName;
+        hideOverlay();
+      });
+
+      showOverlay();
+
+      let currentChapter = "chapter1";
+
       function displayChapter(chapterId) {
         const chapter = storyData.chapters[chapterId];
         if (chapter) {
-          // Update the chapter title and description on the webpage.
-          MainTitle.textContent = chapter.title;
-          chapterDescription.textContent = chapter.description;
+          MainTitle.innerHTML = chapter.title;
+          chapterDescription.innerHTML = chapter.description;
 
           if (chapter.ending) {
-            // If it's the end of the story, hide choice buttons.
-            Choice1.style.display = "none";
-            Choice2.style.display = "none";
+            for (let i = choiceElements.length - 1; i >= 0; i--) {
+              choiceElements[i].style.display = "none";
+              choiceElements[i].removeEventListener("click", () => {});
+            }
           } else {
-            // If not the end, display and configure the choice buttons.
-            Choice1.textContent = chapter.choices[0].text;
-            Choice2.textContent = chapter.choices[1].text;
+            for (let i = 0; i < choiceElements.length; i++) {
+              const choice = chapter.choices[i];
+              const choiceElement = choiceElements[i];
 
-            // Add event listeners to the choice buttons.
-            Choice1.addEventListener("click", () =>
-              displayChapter(chapter.choices[0].destination)
-            );
-            Choice2.addEventListener("click", () =>
-              displayChapter(chapter.choices[1].destination)
-            );
+              if (choice && choice.text !== "") {
+                choiceElement.style.display = "";
+                choiceElement.innerHTML = choice.text;
+
+                choiceElement.addEventListener("click", () =>
+                  displayChapter(choice.destination)
+                );
+              } else {
+                choiceElement.style.display = "none";
+                choiceElement.removeEventListener("click", () => {});
+              }
+            }
           }
         }
       }
 
-      // Start displaying the initial chapter (Chapter 1).
       displayChapter(currentChapter);
     })
-    .catch((error) => console.error("Error loading story data:", error)); // Handle any errors during fetch.
+    .catch((error) => console.error("Error loading story data:", error));
 });

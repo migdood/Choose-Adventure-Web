@@ -1,49 +1,141 @@
 {
+  "characters": {
+    "player": {
+      "name": "",
+      "gender": ""
+    }
+  }
+  ,  
   "chapters": {
     "chapter1": {
-      "title": "The Mysterious Swamp",
-      "description": "You find yourself at the edge of a dark and mysterious swamp. The air is thick with fog, and the silence is eerie.",
+      "title": "Hello Traveler",
+      "description": "Enter your name then select you character. (It has no influence on the game)",
       "choices": [
         {
-          "text": "Enter the swamp",
-          "destination": "chapter2a"
+          "text": "Hunter",
+          "destination": "chapter1a"
         },
         {
-          "text": "Turn back",
-          "destination": "chapter2b"
+          "text": "Explorer",
+          "destination": "chapter1a"
         }
       ]
-    }
-    
-    ,
-    
-    "chapter2a": {
+    },
+
+    "chapter1a": {
       "title": "Into the Darkness",
-      "description": "As you step into the swamp, the murky water engulfs your boots. The croaking of unseen creatures fills the air.",
+      "description": "You have accepted a quest to retrieve an important journal for a rich merchant. He claims his grandmother keeps it inside a chest in her cabin upon the swamp. He promised you a handsome reward and asked you to never speak of it to anyone else. You accepted and now stand before a deep darkness within the woods ahead. The eerie silence and occasional croaking are your only companion in this darkness.",
       "choices": [
         {
           "text": "Continue deeper",
           "destination": "chapter3a"
         },
         {
-          "text": "Retreat to safety",
-          "destination": "chapter3b"
+          "text": "Retreat to safety and abandon the quest",
+          "destination": "chapterEND"
+        },
+        {
+          "text": "sdf",
+          "destination": "sdfafe"
+        }
+      ]
+    },
+    "chapterEND": {
+      "title": "You turn Back",
+      "description": "You turn your back on the swamp, thinking you have better things to do like clean the pot your mom gave you or prepare dinner than risk you life seeking some grandma's journal in a swamp. As you walk back you pride yourself on this smart choice and say `What a smarty pants I am`",
+      "ending": true
+    }
+    ,
+    "chapter": {
+      "title": "",
+      "description": "",
+      "choices": [
+        {
+          "text": "",
+          "destination": ""
+        },
+        {
+          "text": "",
+          "destination": ""
         }
       ]
     }
-
     ,
-
-    "chapter2b": {
-      "title": "The Retreat",
-      "description": "You decide not to risk the unknown and turn back, leaving the swamp behind.",
-      "ending": true
-    },
-    "chapter3a": {
-      "title": "In the Heart of Darkness",
-      "description": "The swamp's darkness envelops you. Strange sounds echo around you, and your flashlight flickers.",
-      "ending": true
-    },
+    "chapter": {
+      "title": "",
+      "description": "",
+      "choices": [
+        {
+          "text": "",
+          "destination": ""
+        },
+        {
+          "text": "",
+          "destination": ""
+        }
+      ]
+    }
+    ,
+    "chapter": {
+      "title": "",
+      "description": "",
+      "choices": [
+        {
+          "text": "",
+          "destination": ""
+        },
+        {
+          "text": "",
+          "destination": ""
+        }
+      ]
+    }
+    ,
+    "chapter": {
+      "title": "",
+      "description": "",
+      "choices": [
+        {
+          "text": "",
+          "destination": ""
+        },
+        {
+          "text": "",
+          "destination": ""
+        }
+      ]
+    }
+    ,
+    "chapter": {
+      "title": "",
+      "description": "",
+      "choices": [
+        {
+          "text": "",
+          "destination": ""
+        },
+        {
+          "text": "",
+          "destination": ""
+        }
+      ]
+    }
+    ,
+    "chapter": {
+      "title": "",
+      "description": "",
+      "choices": [
+        {
+          "text": "",
+          "destination": ""
+        },
+        {
+          "text": "",
+          "destination": ""
+        }
+      ]
+    }
+    ,
     "chapter3b": {
       "title": "A Wise Decision",
       "description": "You wisely choose to retreat, heading back to safety and leaving the swamp behind.",

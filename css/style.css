@@ -1,4 +1,5 @@
 body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #d7d6d6;
 }
 main .title {
@@ -24,11 +25,12 @@ main .title {
 }
 .main-text {
   font-size: 35px;
+  line-height: 40px;
   width: 1000px;
   height: 600px;
   padding: 20px;
   border: 1px solid #070404;
-  background-color: #f5f5f5;
+  background-color: #cfd59c;
   overflow: auto;
 }
 .choices {
@@ -53,10 +55,10 @@ main .title {
   animation: buttonsAppear 1s;
 }
 @keyframes buttonsAppear {
-  0%{
+  0% {
     height: 0px;
   }
-  100%{
+  100% {
     height: 50px;
   }
 }
@@ -76,18 +78,40 @@ main .title {
   height: 450px;
   padding: 20px;
   border: 1px solid #070404;
-  background-color: rgb(189, 44, 92);
+  background-color: rgb(52, 78, 53);
   overflow: hidden;
 }
-.character-container{
+.character-container {
   width: 100%;
   height: 90%;
   display: flex;
   justify-content: center;
   align-items: start;
 }
-#portrait{
-  border: 1px black solid;
+#portrait {
   width: auto;
-  height: 360px;
+  height: 300px;
+}
+.overlay {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(144, 158, 102, 0.98); /* White with some transparency */
+  z-index: 9999;
+}
+
+.input-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
 }
