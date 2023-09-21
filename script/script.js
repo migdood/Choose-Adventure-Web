@@ -12,6 +12,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const nameInput = document.getElementById("name");
   const submitButton = document.getElementById("submit");
 
+  function changeNameToUpperCase(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
+  const playerName = nameInput.value;
+  const upperCaseName = changeNameToUpperCase(playerName);
+
   fetch("story.json")
     .then((response) => response.json())
     .then((storyData) => {
@@ -29,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
               choiceElements[i].removeEventListener("click", () => {});
             }
           } else {
+            // For choices
             for (let i = 0; i < choiceElements.length; i++) {
               const choice = chapter.choices[i];
               const choiceElement = choiceElements[i];
@@ -46,6 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
               }
             }
           }
+        } else{
+          alert("Failed to load Chapter " + chapter);
         }
       }
 
@@ -58,10 +68,20 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // Stupid button hides the damned overlay and activates the whole shabang
-      submitButton.addEventListener("click", function () {      
+      submitButton.addEventListener("click", function () {
         // My ass replacing the stinking names manually, kill me
-        storyData.chapters.chapter1.title = storyData.chapters.chapter1.title.replace("{{playerName}}", nameInput.value);
-        storyData.chapters.chapter1a.description = storyData.chapters.chapter1a.description.replace("{{playerName}}", nameInput.value);
+        // This is where you have to change the names, so every time there is a new addition you gotta change it here
+        storyData.chapters.chapter1.title =
+          storyData.chapters.chapter1.title.replace(
+            "{{playerName}}",
+            upperCaseName
+          );
+
+        storyData.chapters.chapter1a.description =
+          storyData.chapters.chapter1a.description.replace(
+            "{{playerName}}",
+            upperCaseName
+          );
 
         //MFing activates the whole shabang
         displayChapter(currentChapter);
