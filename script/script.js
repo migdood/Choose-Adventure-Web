@@ -12,13 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const nameInput = document.getElementById("name");
   const submitButton = document.getElementById("submit");
 
-  function changeNameToUpperCase(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-
-  const playerName = nameInput.value;
-  const upperCaseName = changeNameToUpperCase(playerName);
-
   fetch("story.json")
     .then((response) => response.json())
     .then((storyData) => {
@@ -54,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
               }
             }
           }
-        } else{
+        } else {
           alert("Failed to load Chapter " + chapter);
         }
       }
@@ -69,6 +62,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Stupid button hides the damned overlay and activates the whole shabang
       submitButton.addEventListener("click", function () {
+        function changeNameToUpperCase(str) {
+          return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+        const playerName = nameInput.value;
+        const upperCaseName = changeNameToUpperCase(playerName);
+
         // My ass replacing the stinking names manually, kill me
         // This is where you have to change the names, so every time there is a new addition you gotta change it here
         storyData.chapters.chapter1.title =
