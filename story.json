@@ -33,8 +33,7 @@
       "title": "You turn Back",
       "description": "You turn your back on the swamp, thinking you have better things to do like clean the pot your mom gave you or prepare dinner than risk you life seeking some grandma's journal in a swamp. As you walk back you pride yourself on this smart choice and say `What a smarty pants I am`",
       "ending": true
-    }
-    ,
+    },
     "chapter2a": {
       "title": "Into the Darkness",
       "description": "As you bravely tread deeper into the abyss, the very air seems to thicken with foreboding. Sinister whispers slither through the encroaching darkness, sending shivers down your spine.</br></br> Spectral apparitions flicker at the periphery of your vision, elusive phantoms beckoning you towards hidden horrors. Their cold, ethereal gazes haunt your every step, while the gnarled trees leer overhead, their branches like skeletal fingers grasping at your sanity.</br></br> The swamp's eerie chorus of unseen creatures swells to an unsettling crescendo, a cacophony of otherworldly cries that reverberate through your very soul. You press on, torn between the irresistible promise of gold and the ever-present dread that you are now part of a malevolent tale told only in the darkest of nightmares.</br></br> As you venture deeper into the shadowy abyss, a choice looms before you like a grim omen. Two divergent paths emerge from the oppressive gloom. </br></br>The first path ascends gently, winding through a dense thicket toward a mist-shrouded mountain. The air grows colder, and the shadows deepen, only the unknown awaits at its summit.</br></br> The second path, a sinister road of twisted cobblestones, beckons you with an eerie charm. Strange frogs, perched atop malevolent mushrooms, line the way, their unblinking eyes following your every move This road whispers of secrets hidden in plain sight, as if nature itself has conspired to lead you astray.",
@@ -45,16 +44,15 @@
         },
         {
           "text": "Along the eerie path, flanked by frogs perched upon mystical mushrooms...",
-          "destination": ""
+          "destination": "DUMMY"
         },
         {
           "text": "Remember the merchant's directions.",
-          "destination": "chapterRememberMerchantDirections1"
+          "destination": "chapterRememberMerchantDirections-1"
         }
       ]
-    }
-    ,
-    "chapterRememberMerchantDirections1": {
+    },
+    "chapterRememberMerchantDirections-1": {
       "title": "The Merchants words",
       "description": "The merchant's words echo in your mind as you contemplate your next move. His instructions were clear:</br></br> <strong>Cabin Location:</strong> The grandmother's cabin is nestled deep within the swamp, atop a small hill. Overlooking the swamp. Find the highest spot and look for a cabin atop a mountain.</br></br><strong>Secrecy is Key:</strong> You must maintain absolute secrecy regarding the mission. The merchant's reputation and your safety hinge on this discretion. Do not utter a word to anyone.",
       "choices": [
@@ -63,8 +61,7 @@
           "destination": "chapter2b"
         }
       ]
-    }
-    ,
+    },
     "chapter2b": {
       "title": "The climb or the decent",
       "description": "The first path ascends gently, winding through a dense thicket toward a mist-shrouded mountain. The air grows colder, and the shadows deepen, only the unknown awaits at its summit.</br></br> The second path, a sinister road of twisted cobblestones, beckons you with an eerie charm. Strange frogs, perched atop malevolent mushrooms, line the way, their unblinking eyes following your every move This road whispers of secrets hidden in plain sight, as if nature itself has conspired to lead you astray.",
@@ -75,63 +72,31 @@
         },
         {
           "text": "Along the eerie path, flanked by frogs perched upon mystical mushrooms...",
-          "destination": ""
+          "destination": "DUMMY"
         },
         {
           "text": "Remember the merchant's directions, again.",
-          "destination": "chapterRememberMerchantDirections1"
+          "destination": "chapterRememberMerchantDirections-1"
         }
       ]
-    }
-    ,
+    },
     "chapterUpTheMountainPath": {
       "title": "Ascend the Mountain",
       "description": "You ascend the winding path that leads you up the treacherous mountain. With every step, the ground beneath your feet grows increasingly slippery and unstable. Loose pebbles and damp earth conspire to make your progress an uphill struggle.</br></br> As you ascend, the mountain's imposing wall rises alongside you, offering a potential lifeline. You notice a small crevice within the rocky surface, a chance to grasp onto something with your fingers and steady your progress. But is there something moving inside...?</br></br> Suddenly, a monstrous insect out of the blue darts toward your face with alarming speed. Instinctively, you swat at it, and in the chaotic moment, your grip on the slick ground falters. With a startled gasp, you feel yourself losing your footing. You find yourself on the precipice of an unavoidable slide, hurtling downward with your arse as your unceremonious guide through the long descent.",
       "choices": [
         {
           "text": "Grab the Crevice in the Wall!",
-          "destination": ""
+          "destination": "DUMMY"
         },
         {
           "text": "Attempt to Stabilize!",
-          "destination": ""
+          "destination": "DUMMY"
         }
       ]
-    }
-    ,
-    "chapter": {
-      "title": "",
-      "description": "",
-      "choices": [
-        {
-          "text": "",
-          "destination": ""
-        },
-        {
-          "text": "",
-          "destination": ""
-        }
-      ]
-    }
-    ,
-    "chapter": {
-      "title": "",
-      "description": "",
-      "choices": [
-        {
-          "text": "",
-          "destination": ""
-        },
-        {
-          "text": "",
-          "destination": ""
-        }
-      ]
-    }
-    ,
-    "chapter3b": {
-      "title": "A Wise Decision",
-      "description": "You wisely choose to retreat, heading back to safety and leaving the swamp behind.",
+    },
+    "DUMMY": {
+      "title": "THE END",
+      "description": "BYE BYE LOSERS HAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAH",
       "ending": true
     }
   }

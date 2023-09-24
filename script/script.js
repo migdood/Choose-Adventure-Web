@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const overlay = document.getElementById("overlay");
   const nameInput = document.getElementById("name");
   const submitButton = document.getElementById("submit");
-
+  const stack = [];
   fetch("story.json")
     .then((response) => response.json())
     .then((storyData) => {
@@ -38,9 +38,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 choiceElement.style.display = "";
                 choiceElement.innerHTML = choice.text;
 
-                choiceElement.addEventListener("click", () =>
-                  displayChapter(choice.destination)
-                );
+                // Add the event listener
+                choiceElement.addEventListener("click", () => {
+                  currentChapter = choice.destination;
+                  displayChapter(currentChapter);
+                  stack.push(currentChapter);
+                  console.log(stack);
+                  console.log(currentChapter);
+                  
+                  for (let j = 0; j < choiceElements.length; j++) {
+                    const choiceElement = choiceElements[j];
+
+                    choiceElement.removeEventListener('click', () => {});
+                  }
+                });
               } else {
                 choiceElement.style.display = "none";
                 choiceElement.removeEventListener("click", () => {});
@@ -48,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
           }
         } else {
-          alert("Failed to load Chapter " + chapter);
+          alert("Failed to load Chapter " + chapter.error);
         }
       }
 
