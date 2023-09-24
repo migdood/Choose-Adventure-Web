@@ -28,7 +28,7 @@ main .title {
   font-weight: 500;
   line-height: 40px;
   width: 1000px;
-  height: 600px;
+  height: 580px;
   padding: 20px;
   border: 1px solid #070404;
   background-color: #cfd59c;
@@ -37,7 +37,7 @@ main .title {
 .choices {
   font-size: 35px;
   width: 1000px;
-  height: 260px;
+  height: 290px;
   padding: 10px 20px 20px 20px;
   overflow: hidden;
   border: 1px solid #070404;
