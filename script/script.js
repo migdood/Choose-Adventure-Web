@@ -1,5 +1,6 @@
 const MainTitle = document.getElementById("main-text-title");
 const chapterDescription = document.getElementById("main-text");
+const choices = document.getElementById("choices");
 const choicesArray = [
   document.getElementById("choice1"),
   document.getElementById("choice2"),
@@ -18,64 +19,60 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch("story.json")
     .then((response) => response.json())
     .then((storyData) => {
+      function eventDelegator(event) {
+        // Check if the clicked element has the "choice" class
+        if (event.target.classList.contains("choice-button")) {
+          // Extract choice data based on the clicked element
+          choiceIndex = event.target.getAttribute("data-choice");
+          const choice =
+            storyData.chapters[currentChapter].choices[choiceIndex];
+
+          // Call the clickHandler with the choice data
+          clickHandler(choice, event.target);
+          // Remove the event listener after the first click
+          choices.removeEventListener("click", eventDelegator);
+
+          choices.addEventListener("click", eventDelegator);
+        }
+      }
+      choices.addEventListener("click", eventDelegator);
+
+      function clickHandler(choice, choiceFromTheArray) {
+        currentChapter = choice.destination;
+        loadChapter(currentChapter);
+        stack.push(currentChapter);
+
+        console.log("Clicked: " + choice.text);
+        console.log("Current Chapter: " + currentChapter);
+        console.log("Stack: ", stack);
+      }
+
       function loadChapter(chapterID) {
-
         const chapter = storyData.chapters[chapterID];
-
         if (chapter) {
           // Display the title and description
           MainTitle.innerHTML = chapter.title;
           chapterDescription.innerHTML = chapter.description;
-          // Chapter Ending = Hide choices
-          if (chapter.ending) {
-            for (let i = choicesArray.length - 1; i >= 0; i--) {
-              choicesArray[i].style.display = "none";
-            }
-          } else {
-            for (let j = 0; j < choicesArray.length; j++) {
-              const choiceFromTheArray = choicesArray[j];
-              choiceFromTheArray.removeEventListener('click',clickHandler)
-              //alert('removed event listener')
-            }
-            // TODO create a for loop outside the for loop, make it loop through all the choices inside the choice array, if there are some eventlisteners then activate boolean true and put it in an if statement
-            if(choicesArray){
 
-            }
-            // Populate choice box with what's available
-            for (let i = 0; i < choicesArray.length; i++) {
-              const choice = chapter.choices[i];
+          // Hide all the choices
+          choicesArray.forEach((choiceFromTheArray) => {
+            choiceFromTheArray.style.display = "none";
+          });
+          if (!chapter.ending) {
+            // Populate choice box with the available text
+            chapter.choices.forEach((choice, i) => {
               const choiceFromTheArray = choicesArray[i];
-
               if (choice && choice.text !== "") {
                 choiceFromTheArray.style.display = "";
                 choiceFromTheArray.innerHTML = choice.text;
-
-                function clickHandlerRemover(removeElement) {
-                  removeElement.removeEventListener('click', clickHandler);
-                }
-                function clickHandler() {
-                  currentChapter = choice.destination;
-                  loadChapter(currentChapter);
-                  stack.push(currentChapter);
-    
-                  console.log("Clicked: " + choice.text);
-                  console.log("Current Chapter: " + currentChapter);
-                  console.log("Stack: ", stack);
-
-                  clickHandlerRemover(choiceFromTheArray[i]);
-                }
-
-                choiceFromTheArray.addEventListener("click", clickHandler);
-              } else {
-                choiceFromTheArray.style.display = "none";
-                choiceFromTheArray.removeEventListener("click", () => {});
               }
-            }
+            });
           }
         } else {
           alert("Failed to Load Chapter, Check the fetch API");
         }
       }
+
       // Stupid button hides the damned overlay and UpperCase first letter of the given name
       submitButton.addEventListener("click", function () {
         function changeNameToUpperCase(str) {

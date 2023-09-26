@@ -34,7 +34,7 @@ main .title {
   background-color: #cfd59c;
   overflow: auto;
 }
-.choices {
+#choices {
   font-size: 35px;
   width: 1000px;
   height: 290px;
