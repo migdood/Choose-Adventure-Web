@@ -21,7 +21,7 @@
       "choices": [
         {
           "text": "Continue deeper",
-          "destination": "chapter2a"
+          "destination": "chapter-1-start"
         },
         {
           "text": "Retreat to safety and abandon the quest",
@@ -31,62 +31,64 @@
     },
     "chapter1aEND": {
       "title": "You turn Back",
-      "description": "You turn your back on the swamp, thinking you have better things to do like clean the pot your mom gave you or prepare dinner than risk you life seeking some grandma's journal in a swamp. As you walk back you pride yourself on this smart choice and say `What a smarty pants I am`",
+      "description": "<p>You turn your back on the swamp, thinking you have better things to do than risk your life seeking some dead granny's journal in a swamp. As you walk back, your mind races with thoughts of domesticity. The soufflé recipe you stumbled upon in a book the other day beckons you, and you can't help but envision yourself as a master chef.</p><br><p>But that's not all; the laundry basket overflowing with clothes reminds you of your impending chores, and the trash that needs to be taken out stands as a testament to your responsibilities. With each step away from the eerie swamp, your determination to tackle these mundane tasks grows stronger.</p><br><p>As you make your hasty retreat, you suddenly feel an inexplicable surge of fear. Your heart pounds, and your legs seem to have a mind of their own, propelling you forward at breakneck speed. You can't help but shake with trepidation, hoping to put as much distance as possible between yourself and the sinister unknown lurking in that accursed place.</p><br>",
       "ending": true
     },
-    "chapter2a": {
+    "chapter-1-start": {
       "title": "Into the Darkness",
-      "description": "As you bravely tread deeper into the abyss, the very air seems to thicken with foreboding. Sinister whispers slither through the encroaching darkness, sending shivers down your spine.</br></br> Spectral apparitions flicker at the periphery of your vision, elusive phantoms beckoning you towards hidden horrors. Their cold, ethereal gazes haunt your every step, while the gnarled trees leer overhead, their branches like skeletal fingers grasping at your sanity.</br></br> The swamp's eerie chorus of unseen creatures swells to an unsettling crescendo, a cacophony of otherworldly cries that reverberate through your very soul. You press on, torn between the irresistible promise of gold and the ever-present dread that you are now part of a malevolent tale told only in the darkest of nightmares.</br></br> As you venture deeper into the shadowy abyss, a choice looms before you like a grim omen. Two divergent paths emerge from the oppressive gloom. </br></br>The first path ascends gently, winding through a dense thicket toward a mist-shrouded mountain. The air grows colder, and the shadows deepen, only the unknown awaits at its summit.</br></br> The second path, a sinister road of twisted cobblestones, beckons you with an eerie charm. Strange frogs, perched atop malevolent mushrooms, line the way, their unblinking eyes following your every move. This road whispers of secrets hidden in plain sight, as if nature itself has conspired to lead you astray.",
+      "description": "<p>As you valiantly trudge through the knee-deep swamp water and muck, each step feels like a battle against the encroaching abyss. The very air around you thickens with foreboding, as if the swamp itself resists your intrusion, clinging to your every movement.</p></br><p>Menacing whispers slither through the encroaching darkness, sending shivers down your spine. Your senses are assaulted by the spectral apparitions that flicker at the periphery of your vision. Elusive phantoms beckon you towards hidden horrors, their cold, ethereal gazes haunting your every step.</p></br><p>Above, gnarled trees leer like malevolent sentinels, their branches resembling skeletal fingers grasping at your sanity. The swamp's eerie chorus of unseen creatures swells to an unsettling crescendo, a cacophony of otherworldly cries that reverberates through your very soul.</p></br><p>You press on, determined yet torn between the irresistible promise of gold and the ever-present dread that you are now part of a malevolent tale told only in the darkest of nightmares.</p></br><p>Finally, you stand upon relatively stable ground, a momentary escape from the engulfing clutches of the insatiable swamp. The earth still yields under the weight of your steps, bearing proof to the perilous journey you've endured. Ahead, two divergent paths emerge from the grasp of the voracious morass, like a somber signpost directing your way forward.</p></br><p>The first path ascends gently, winding through a dense thicket toward a mist-shrouded mountain. The air grows colder, and the shadows deepen, shrouding the summit in an aura of mystery and foreboding.</p></br><p>The second path, however, presents itself as a sinister road of twisted cobblestones. An eerie charm emanates from it, drawing you in. Strange frogs, perched atop malevolent mushrooms, line the way, their unblinking eyes following your every move. This road whispers of secrets hidden in plain sight, as if nature itself has conspired to lead you astray.</p>",
       "choices": [
         {
           "text": "Up the winding road towards the mountain.",
-          "destination": "chapterUpTheMountainPath"
+          "destination": "up-the-mountain-path"
         },
         {
           "text": "Along the eerie path, flanked by frogs perched upon mystical mushrooms...",
-          "destination": "DUMMY"
+          "destination": "DUMMY",
+          "// TODO:": ""
         },
         {
           "text": "Remember the merchant's directions.",
-          "destination": "chapterRememberMerchantDirections-1"
+          "destination": "remember-merchant-directions-1"
         }
       ]
     },
-    "chapterRememberMerchantDirections-1": {
+    "remember-merchant-directions-1": {
       "title": "The Merchants words",
-      "description": "The merchant's words echo in your mind as you contemplate your next move. His instructions were clear:</br></br> <strong>Cabin Location:</strong> The grandmother's cabin is nestled deep within the swamp, atop a small hill. Overlooking the swamp. Find the highest spot and look for a cabin atop a mountain.</br></br><strong>Secrecy is Key:</strong> You must maintain absolute secrecy regarding the mission. The merchant's reputation and your safety hinge on this discretion. Do not utter a word to anyone.",
+      "description": "<p>The merchant's words echo in your mind as you contemplate your next move. His instructions were clear:</p></br><p> <strong>Cabin Location:</strong> The grandmother's cabin is nestled deep within the swamp, atop a small hill. Overlooking the swamp. Find the highest spot and look for a cabin atop a mountain.</p></br><p><strong>Secrecy is Key:</strong> You must maintain absolute secrecy regarding the mission. The merchant's reputation and your safety hinge on this discretion. Do not utter a word to anyone.</p>",
       "choices": [
         {
           "text": "I remember now.",
-          "destination": "chapter2b"
+          "destination": "i-remember-now"
         }
       ]
     },
-    "chapter2b": {
+    "i-remember-now": {
       "title": "The climb or the decent",
       "description": "The first path ascends gently, winding through a dense thicket toward a mist-shrouded mountain. The air grows colder, and the shadows deepen, only the unknown awaits at its summit.</br></br> The second path, a sinister road of twisted cobblestones, beckons you with an eerie charm. Strange frogs, perched atop malevolent mushrooms, line the way, their unblinking eyes following your every move This road whispers of secrets hidden in plain sight, as if nature itself has conspired to lead you astray.",
       "choices": [
         {
           "text": "Up the winding road towards the mountain.",
-          "destination": "chapterUpTheMountainPath"
+          "destination": "up-the-mountain-path"
         },
         {
           "text": "Along the eerie path, flanked by frogs perched upon mystical mushrooms...",
-          "destination": "DUMMY"
+          "destination": "DUMMY",
+          "// TODO:": ""
         },
         {
           "text": "Remember the merchant's directions, again.",
-          "destination": "chapterRememberMerchantDirections-1"
+          "destination": "remember-merchant-directions-1"
         }
       ]
     },
-    "chapterUpTheMountainPath": {
+    "up-the-mountain-path": {
       "title": "Ascend the Mountain",
       "description": "You ascend the winding path that leads you up the treacherous mountain. With every step, the ground beneath your feet grows increasingly slippery and unstable. Loose pebbles and damp earth conspire to make your progress an uphill struggle.</br></br> As you ascend, the mountain's imposing wall rises alongside you, offering a potential lifeline. You notice a small crevice within the rocky surface, a chance to grasp onto something with your fingers and steady your progress. But is there something moving inside...?</br></br> Suddenly, a monstrous insect out of the blue darts toward your face with alarming speed. Instinctively, you swat at it, and in the chaotic moment, your grip on the slick ground falters. With a startled gasp, you feel yourself losing your footing. You find yourself on the precipice of an unavoidable slide, hurtling downward with your arse as your unceremonious guide through the long descent.",
       "choices": [
         {
           "text": "Grab the Crevice in the Wall!",
-          "destination": "DUMMY"
+          "destination": "grab-the-crevice-in-the-wall"
         },
         {
           "text": "Attempt to Stabilize!",
@@ -96,8 +98,139 @@
     },
     "DUMMY": {
       "title": "THE END",
-      "description": "BYE BYE LOSERS HAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAH",
-      "ending": true
+      "description": "Fix this later, currently focus on one thing",
+      "ending": true,
+      "// TODO:": ""
+    },
+    "grab-the-crevice-in-the-wall": {
+      "title": "The Crevice in the Wall",
+      "description": "<p>As you reach out to grab the crevice in the wall, your fingers sink into an unsettling, gelatinous substance. It oozes and clings to your skin, emitting a nauseating stench that seems to seep into your very being. The sticky substance appears moving ever so slightly, <em>as if it pulsates with life</em>. Panic wells up within you, but there's no time to clean your hands—your grip on the slick ground is all that stands between you and the fall below.</p><br><p>With a desperate surge of strength, you manage to anchor yourself to the crevice just in time. The vile substance adheres to your hands, its repugnant odor clinging to your senses. The monstrous insect that had lunged at you moments ago is nowhere to be seen, as if swallowed by the shadows of the mountain.</p><br><p>You continue your ascent up the treacherous path, the mountain's imposing wall offering you a grim solace. The further you climb, the more stable the terrain becomes. The slick, treacherous ground transitions into solid rock, and your footing becomes surer.</p><br><p>At long last, you reach the peak of the mountain. The black swamp stretches out below you, an expanse of darkness and mystery. The view is breathtaking, but there's something eerie about the tranquil beauty of the landscape that sends shivers down your spine.</p><br>",
+      "choices": [
+        {
+          "text": "Look Around",
+          "destination": "look-around-mountain-top"
+        },
+        {
+          "text": "Attempt to clean your hands",
+          "destination": "attempt-clean-hands"
+        }
+      ]
+    },
+    "attempt-clean-hands": {
+      "title": "Attempt to Clean Hands",
+      "description": "<p>You desperately try to wipe away the sticky residue on your hands. Soil, rocks, and plants become your makeshift tools in this battle against the clinging substance. However, your efforts yield only partial success after a frustrating 10 minutes of struggle. Your hands remain marked by the eerie encounter.</p><br><p>Resigned to your fate, you turn your attention back to the view from the mountain's peak. The black swamp below, shrouded in darkness, captivates your gaze with its haunting beauty and eerie lights.</p><br>",
+      "choices": [
+        {
+          "text": "Look around",
+          "destination": "look-around-mountain-top"
+        }
+      ]
+    },
+    "look-around-mountain-top": {
+      "title": "View From the Mountain",
+      "description": "<p>As you reach the mountain's peak, your gaze sweeps over the landscape below, revealing a vast expanse of darkness—the black swamp. It stretches out before you, mysterious and foreboding, its secrets hidden beneath a shroud of unnatural lights. The eerie radiance casts an unsettling glow across the swamp, making it appear both alluring and ominous.</p><br><p>Yet, as you stand there, an unsettling sensation washes over you. Faint buzzing fills the air, a persistent yet elusive sound that prickles at your senses. You strain your eyes to locate the source, but the darkness conceals it from your view, leaving you with an uneasy sense of vulnerability.</p><br><p>As you peer into the distance, your eyes catch something intriguing—a tall hill rising in the midst of the swamp, half a day's journey away. Atop this hill stands a cabin, its silhouette barely visible against the dark sky. It's likely the very cabin the merchant mentioned.</p><br><p>However, the details remain obscured, and you can't make out much more than that. The sky above is eerily dark, a stark contrast to the dimly lit swamp. It's as if a curse hangs in the air, a sense of impending doom that surrounds you.</p><br><p>From your vantage point at the mountain's peak, you see a changing landscape below. Round clearings punctuate the dense forest of trees, and portions of the swamp are bathed in an eerie, otherworldly hue. Trees with leaves of unnatural shades like blue and red stand out against the dark backdrop. It's a stark and unsettling contrast to the surrounding landscape, leaving you with a lingering sense of unease.</p><br><p>Yet, your apprehension intensifies as you r something behind you. You turn your head and see a dark shape in the distance. The same monstrous insect that attacked you earlier has returned, and this time, it's not alone. A swarm of these malevolent creatures descends upon the swamp, forming a massive, churning cloud of insects that advances toward you with relentless determination.</p><br><p>Their collective buzzing grows louder and more frenzied, an ominous cacophony that sets your nerves on edge. The hairs on your body stand on end as the cloud of insects approaches, a dark harbinger of impending danger.</p><br>",
+      "choices": [
+        {
+          "text": "Quickly Analyze the bugs",
+          "destination": "analyze-the-bugs"
+        },
+        {
+          "text": "Fight the swarm",
+          "destination": "fight-the-swarm",
+          "// TODO:": ""
+        },
+        {
+          "text": "Run away",
+          "destination": "run-away-from-swarm"
+        }
+      ]
+    },
+    "analyze-the-bugs": {
+      "title": "Swarm Bug Analysis",
+      "description": "<p>With a curious impulse, you decide to take a closer look at the peculiar insect. It's a creature of dark, midnight blue, its body smaller than your clenched fist. Its wings beat at an astonishing rate, creating a frenzied blur in the dim light. You notice a needle-like appendage protruding from its face, shimmering with an eerie, iridescent sheen.</p>",
+      "choices": [
+        {
+          "text": "Fight the swarm",
+          "destination": "fight-the-swarm",
+          "// TODO:": ""
+        },
+        {
+          "text": "Run the hell away",
+          "destination": "run-away-from-swarm"
+        }
+      ]
+    },
+    "run-away-from-swarm": {
+      "title": "Leap of Faith",
+      "description": "<p>As panic surges within you, the realization dawns that there's nowhere to escape to except for the perilous edge of the cliff. With your heart pounding in your chest, you hastily recall the ground you traversed to reach this point—knee-deep water and muck all around. A breath catches in your throat, and in a moment of sheer desperation, you clench your jaw, utter a fervent prayer, and with every ounce of resolve, you propel yourself off the mountain's edge into the embrace of trees and the ground.</p></br>",
+      "choices": [
+        {
+          "text": "You spread your arms wide, trying to slow your descent like a makeshift parachute.",
+          "destination": "landing-into-water"
+        },
+        {
+          "text": "You tuck your body into a tight ball, hoping to minimize the impact.",
+          "destination": "landing-into-water"
+        },
+        {
+          "text": "You extend your legs and attempt to land with your feet first, aiming to absorb the shock.",
+          "destination": "landing-into-water"
+        }
+      ]
+    },
+    "landing-into-water": {
+      "title": "A Painful Fall",
+      "description": "<p>You plunge into the abyss, the seemingly endless fall stretching out before you. Time slows to a crawl, and your heart races as you plummet, the ground below an ominous maw that hungers for your arrival.</p><br><p>For what feels like an eternity, you descend through the darkened canopy, your body careening wildly through the thick tangle of branches. Vines lash out like serpents, ensnaring your limbs and flailing you about, your descent a chaotic dance of desperation.</p><br><p>Then, with a sudden, bone-jarring impact, you crash through the canopy and into the waiting embrace of the swamp below. The murky water cushions your fall, saving you from the brink of certain doom. You surface with a gasp, drenched from head to toe, feeling the painful sting of slaps from tree branches and vines that still cling to your body.</p><br><p>Gazing upward, you spot the ragged tear you tore through the tree canopy, a testament to your harrowing journey. As if to mock your survival, a branch swings down and smacks you on the head, a final, painful reminder of the dangers in this accursed swamp.</p><br><p>You cast a bewildered glance around, taking in your surroundings as you catch your breath. Before you, the swamp stretches endlessly, shrouded in eerie radiance. But what captures your attention are the hundreds, perhaps even thousands, of diminutive frogs perched upon mushrooms and lily pads.</p><br><p>These small amphibians regard you with their unblinking eyes, their collective gaze an unsettling weight upon your shoulders. Then, in eerie unison, they begin to croak, the sound drilling into your brain, reverberating through your very soul. The relentless chorus of their croaking is inescapable, a maddening cacophony that threatens to unravel your sanity.</p><br>",
+      "choices": [
+        {
+          "text": "Walk in the direction you remember the cabin being",
+          "destination": "start-walking-to-cabin"
+        },
+        {
+          "text": "",
+          "destination": ""
+        }
+      ]
+    },
+    "": {
+      "title": "",
+      "description": "",
+      "choices": [
+        {
+          "text": "",
+          "destination": ""
+        }
+      ]
+    },
+    "": {
+      "title": "",
+      "description": "",
+      "choices": [
+        {
+          "text": "",
+          "destination": ""
+        }
+      ]
+    },
+    "": {
+      "title": "",
+      "description": "",
+      "choices": [
+        {
+          "text": "",
+          "destination": ""
+        }
+      ]
+    },
+    "": {
+      "title": "",
+      "description": "",
+      "choices": [
+        {
+          "text": "",
+          "destination": ""
+        }
+      ]
     }
   }
 }
