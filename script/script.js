@@ -15,7 +15,7 @@ const stack = [];
 
 let currentChapter = "chapter1";
 // "DOMContentLoaded" means it's waiting for all the html to load then executes the JS
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
   fetch("story.json")
     .then((response) => response.json())
     .then((storyData) => {
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     })
     .catch((error) => console.error("Error loading story data: ", error));
-});
+// });
 
 function showOverlay() {
   overlay.style.display = "flex";

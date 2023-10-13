@@ -1,13 +1,11 @@
-@font-face {
-  font-family: Spiral;
-  src: url(/Fonts/SpiralST.ttf);
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: #d7d6d6;
 }
 main .title {
-  font-family: Spiral;
   text-align: center;
   font-size: 55px;
   color: black;
@@ -107,7 +105,12 @@ main .title {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(144, 158, 102, 0.98); /* White with some transparency */
+  background-color: rgba(
+    144,
+    158,
+    102,
+    0.98
+  ); /* White with some transparency */
   z-index: 9999;
 }
 
